@@ -1,14 +1,5 @@
-const express = require("express");
-const app = express();
+const app = require("./app");
 const port = 3000;
-
-app.use(express.static("public"));
-
-const calculatorRoutes = require("./routes/calculatorRoutes");
-const extraRoutes = require("./routes/extraRoutes");
-
-app.use("/calculator", calculatorRoutes);
-app.use("/extra", extraRoutes);
 
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`);
